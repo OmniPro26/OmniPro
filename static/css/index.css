@@ -31,35 +31,16 @@
 }
 
 .content p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
 }
 
 .box {
-  padding: 2rem;
-}
-
-.box h3 {
-  margin-top: 0.75rem !important;
-}
-
-.mt-3 {
-  margin-top: 1rem;
+  padding: 1.5rem;
 }
 
 section.section {
   padding: 3rem 1.5rem;
-}
-
-table.table th, table.table td {
-  vertical-align: middle;
-  text-align: center;
-}
-
-table.table th:first-child, table.table td:first-child,
-table.table th:nth-child(2), table.table td:nth-child(2),
-table.table th:nth-child(3), table.table td:nth-child(3) {
-  text-align: left;
 }
 
 pre code {
@@ -69,3 +50,33 @@ pre code {
 footer {
   padding: 2rem 0;
 }
+
+/* Carousel */
+#carousel-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  padding: 1rem;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-dot.active {
+  background: #2B7BE8;
+}
+
+#prev-btn:hover, #next-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+

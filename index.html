@@ -8,7 +8,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 </head>
@@ -41,19 +41,19 @@
               </span>
               <span class="link-block">
                 <a href="https://anonymous.4open.science/r/OmniProact-Bench-1D5E" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span class="icon"><i class="fa-brands fa-github"></i></span>
                   <span>Code</span>
                 </a>
               </span>
               <span class="link-block">
                 <a href="https://huggingface.co/datasets/omniproact-bench-neurips26/omniproact-bench" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><img src="./static/images/huggingface.svg" style="height:1em; vertical-align:middle; filter:brightness(10);"></span>
+                  <span class="icon">🤗</span>
                   <span>Dataset</span>
                 </a>
               </span>
               <span class="link-block">
                 <a href="https://huggingface.co/datasets/omniproact-bench-neurips26/omniproact-bench_subset" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><img src="./static/images/huggingface.svg" style="height:1em; vertical-align:middle; filter:brightness(10);"></span>
+                  <span class="icon">🤗</span>
                   <span>Subset (Review)</span>
                 </a>
               </span>
@@ -312,21 +312,21 @@
 <section class="section" style="background-color:#f8f9fa;">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Dataset Statistics</h2>
-    <div class="columns is-centered" style="margin-top:1.5rem;">
-      <div class="column is-4">
-        <h4 class="title is-6 has-text-centered">Audio Dependency per Task</h4>
+    <div class="columns is-centered is-vcentered" style="margin-top:1.5rem;">
+      <div class="column is-3 has-text-centered">
+        <h4 class="title is-6">Audio Dependency</h4>
         <img src="./static/images/audio_dependency_per_task.png" alt="Audio dependency" width="100%">
       </div>
-      <div class="column is-2">
-        <h4 class="title is-6 has-text-centered">Trigger Modality</h4>
+      <div class="column is-3 has-text-centered">
+        <h4 class="title is-6">Trigger Modality</h4>
         <img src="./static/images/trigger_modality_composition.png" alt="Trigger modality" width="100%">
       </div>
-      <div class="column is-3">
-        <h4 class="title is-6 has-text-centered">Trigger Word Cloud</h4>
+      <div class="column is-3 has-text-centered">
+        <h4 class="title is-6">Trigger Word Cloud</h4>
         <img src="./static/images/trigger_event_wordcloud.png" alt="Word cloud" width="100%">
       </div>
-      <div class="column is-3">
-        <h4 class="title is-6 has-text-centered">Trigger Time Distribution</h4>
+      <div class="column is-3 has-text-centered">
+        <h4 class="title is-6">Trigger Time</h4>
         <img src="./static/images/trigger_time_distribution.png" alt="Trigger time" width="100%">
       </div>
     </div>
@@ -337,14 +337,14 @@
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Experimental Analysis</h2>
-    <div class="columns is-centered" style="margin-top:1.5rem;">
-      <div class="column is-6">
-        <h4 class="title is-6 has-text-centered">Temporal Position Ablation</h4>
-        <img src="./static/images/temporal_position_ablation.png" alt="Temporal ablation" width="100%">
+    <div class="columns is-centered is-vcentered" style="margin-top:1.5rem;">
+      <div class="column is-6 has-text-centered">
+        <h4 class="title is-6">Temporal Position Ablation</h4>
+        <img src="./static/images/temporal_position_ablation.png" alt="Temporal ablation" style="width:100%; max-height:320px; object-fit:contain;">
       </div>
-      <div class="column is-4">
-        <h4 class="title is-6 has-text-centered">Trigger Modality Radar</h4>
-        <img src="./static/images/trigger_modality_radar.png" alt="Radar" width="100%">
+      <div class="column is-4 has-text-centered">
+        <h4 class="title is-6">Trigger Modality Radar</h4>
+        <img src="./static/images/trigger_modality_radar.png" alt="Radar" style="width:100%; max-height:320px; object-fit:contain;">
       </div>
     </div>
   </div>

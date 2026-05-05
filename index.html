@@ -11,9 +11,6 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
 </head>
 <body>
 
@@ -24,23 +21,22 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">OmniProact-Bench</h1>
-          <h2 class="subtitle is-4">A Comprehensive Benchmark for Omni Proactive Streaming Video Understanding</h2>
+          <h2 class="subtitle is-4" style="margin-top: -0.5rem;">A Comprehensive Benchmark for Omni Proactive Streaming Video Understanding</h2>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">Anonymous Authors</span>
           </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">NeurIPS 2026 Evaluations &amp; Datasets Track</span>
+          <div class="is-size-6 publication-authors" style="margin-top:0.3rem;">
+            <span class="author-block">NeurIPS 2026 Evaluations &amp; Datasets Track (Under Review)</span>
           </div>
 
-          <div class="column has-text-centered">
+          <div class="column has-text-centered" style="margin-top:1rem;">
             <div class="publication-links">
               <!-- PDF Link -->
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <a class="external-link button is-normal is-rounded is-dark" disabled style="pointer-events:none; opacity:0.6;">
                   <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
+                  <span>Paper (Coming Soon)</span>
                 </a>
               </span>
               <!-- Code Link -->
@@ -53,7 +49,7 @@
               <!-- Dataset Link -->
               <span class="link-block">
                 <a href="https://huggingface.co/datasets/omniproact-bench-neurips26/omniproact-bench" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="far fa-images"></i></span>
+                  <span class="icon"><i class="fas fa-database"></i></span>
                   <span>Dataset</span>
                 </a>
               </span>
@@ -68,11 +64,11 @@
 <!-- Teaser / Overview Figure -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/benchmark.png" alt="OmniProact-Bench Overview" width="100%">
-      <h2 class="subtitle has-text-centered">
-        OmniProact-Bench comprises 9 sub-tasks across 3 cognitive levels, covering 6 fundamental video understanding capabilities with 84% audio dependency.
-      </h2>
+    <div class="hero-body" style="padding-top:0;">
+      <img src="./static/images/benchmark.png" alt="OmniProact-Bench Overview" width="100%" style="border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);">
+      <p class="subtitle has-text-centered" style="margin-top:1rem; font-size:1rem;">
+        <b>Figure 1.</b> OmniProact-Bench comprises 9 sub-tasks across 3 cognitive levels, covering 6 fundamental video understanding capabilities with 84% audio dependency.
+      </p>
     </div>
   </div>
 </section>
@@ -80,15 +76,15 @@
 <!-- Abstract -->
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <strong>Omni-proactive streaming video understanding</strong> requires a model to autonomously decide when to speak and actively produce responses based on visual or auditory signals while processing a continuous video stream, rather than relying solely on visual triggers. Despite the rapid proliferation of streaming models targeting this capability, how to systematically evaluate them remains an open question: existing proactive benchmarks depend almost exclusively on visual triggers, failing to distinguish omni-modal models from vision-only counterparts; they adopt polling or fixed-timestamp paradigms that leave genuine autonomous timing untested; and their task diversity is narrow, mostly limited to alerting.
+            <b>Omni-proactive streaming video understanding</b> requires a model to autonomously decide when to speak and actively produce responses based on visual or auditory signals while processing a continuous video stream, rather than relying solely on visual triggers. Despite the rapid proliferation of streaming models targeting this capability, how to systematically evaluate them remains an open question: existing proactive benchmarks depend almost exclusively on visual triggers, failing to distinguish omni-modal models from vision-only counterparts; they adopt polling or fixed-timestamp paradigms that leave genuine autonomous timing untested; and their task diversity is narrow, mostly limited to alerting.
           </p>
           <p>
-            To jointly address these limitations, we present <strong>OmniProact-Bench</strong>, the first comprehensive benchmark for omni-proactive streaming video understanding. OmniProact-Bench comprises <strong>2,700 human-reviewed samples</strong> spanning 9 sub-tasks and 3 cognitive levels that collectively map onto 6 fundamental video understanding capabilities, with <strong>84% of samples depending on audio information</strong>. We further propose a dual-mode evaluation protocol: a <em>GT Probe</em> mode that tests temporal boundary sensitivity via pre/post paired probing, and an <em>Online</em> mode requiring frame-by-frame autonomous decision-making with multi-trigger support and over-trigger penalties.
+            To jointly address these limitations, we present <b>OmniProact-Bench</b>, the first comprehensive benchmark for omni-proactive streaming video understanding. OmniProact-Bench comprises <b>2,700 human-reviewed samples</b> spanning 9 sub-tasks and 3 cognitive levels that collectively map onto 6 fundamental video understanding capabilities, with <b>84% of samples depending on audio information</b>. We further propose a dual-mode evaluation protocol: a <em>GT Probe</em> mode that tests temporal boundary sensitivity via pre/post paired probing, and an <em>Online</em> mode requiring frame-by-frame autonomous decision-making with multi-trigger support and over-trigger penalties.
           </p>
           <p>
             Evaluation of 11 mainstream models reveals that current omni models benefit from audio yet differ markedly in their utilization ability; performance degrades substantially as the video stream progresses, exposing a fundamental deficiency in sustained attention; and non-speech sound perception remains a shared bottleneck across all architectures.
@@ -100,28 +96,28 @@
 </section>
 
 <!-- Key Features -->
-<section class="section" style="background-color: #f5f5f5;">
+<section class="section" style="background-color: #f8f9fa;">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Key Features</h2>
-    <div class="columns is-multiline">
+    <div class="columns is-multiline" style="margin-top:1.5rem;">
       <div class="column is-4">
-        <div class="box has-text-centered">
-          <span class="icon is-large"><i class="fas fa-headphones fa-2x"></i></span>
-          <h3 class="title is-5 mt-3">Omni-Modal</h3>
+        <div class="box has-text-centered" style="height:100%;">
+          <span class="icon is-large" style="color:#2B7BE8;"><i class="fas fa-headphones fa-2x"></i></span>
+          <h3 class="title is-5" style="margin-top:0.75rem;">Omni-Modal</h3>
           <p>84% audio dependency with modality-isolation labels for fine-grained multi-modal analysis.</p>
         </div>
       </div>
       <div class="column is-4">
-        <div class="box has-text-centered">
-          <span class="icon is-large"><i class="fas fa-clock fa-2x"></i></span>
-          <h3 class="title is-5 mt-3">Autonomous Timing</h3>
+        <div class="box has-text-centered" style="height:100%;">
+          <span class="icon is-large" style="color:#E86330;"><i class="fas fa-clock fa-2x"></i></span>
+          <h3 class="title is-5" style="margin-top:0.75rem;">Autonomous Timing</h3>
           <p>Online mode: models decide <em>when</em> to speak, with multi-trigger support and over-trigger penalties.</p>
         </div>
       </div>
       <div class="column is-4">
-        <div class="box has-text-centered">
-          <span class="icon is-large"><i class="fas fa-tasks fa-2x"></i></span>
-          <h3 class="title is-5 mt-3">Diverse Tasks</h3>
+        <div class="box has-text-centered" style="height:100%;">
+          <span class="icon is-large" style="color:#2EAD4B;"><i class="fas fa-tasks fa-2x"></i></span>
+          <h3 class="title is-5" style="margin-top:0.75rem;">Diverse Tasks</h3>
           <p>9 sub-tasks covering 6 capabilities: Alert, Monitoring, Grounding, Counting, Narration, Prediction.</p>
         </div>
       </div>
@@ -129,29 +125,27 @@
   </div>
 </section>
 
-<!-- Statistics -->
+<!-- Benchmark Statistics -->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Benchmark Statistics</h2>
-    <div class="columns is-centered">
-      <div class="column is-10">
-        <table class="table is-bordered is-striped is-fullwidth">
+    <div class="columns is-centered" style="margin-top:1rem;">
+      <div class="column is-8">
+        <table class="table is-bordered is-striped is-hoverable is-fullwidth" style="margin:auto;">
           <thead>
-            <tr>
-              <th>Level</th><th>Task</th><th>Capability</th><th>Samples</th><th>Avg. Triggers</th>
-            </tr>
+            <tr><th>Level</th><th>Task</th><th>Capability</th><th style="text-align:center;">Samples</th><th style="text-align:center;">Avg Triggers</th></tr>
           </thead>
           <tbody>
-            <tr><td rowspan="4"><strong>Perception</strong></td><td>IEA</td><td>Alert</td><td>300</td><td>1.3</td></tr>
-            <tr><td>ETG</td><td>Grounding</td><td>300</td><td>1.1</td></tr>
-            <tr><td>RSM</td><td>Monitoring</td><td>300</td><td>4.5</td></tr>
-            <tr><td>SC</td><td>Counting</td><td>300</td><td>1.0</td></tr>
-            <tr><td rowspan="3"><strong>Comprehension</strong></td><td>SCA</td><td>Alert</td><td>300</td><td>3.3</td></tr>
-            <tr><td>CC</td><td>Counting</td><td>300</td><td>4.8</td></tr>
-            <tr><td>EN</td><td>Narration</td><td>300</td><td>4.4</td></tr>
-            <tr><td rowspan="2"><strong>Reasoning</strong></td><td>DC</td><td>Counting</td><td>300</td><td>4.1</td></tr>
-            <tr><td>SSI</td><td>Prediction</td><td>300</td><td>5.7</td></tr>
-            <tr><td colspan="3"><strong>Total</strong></td><td><strong>2,700</strong></td><td><strong>3.4</strong></td></tr>
+            <tr><td rowspan="4"><b>Perception</b></td><td>IEA</td><td>Alert</td><td style="text-align:center;">300</td><td style="text-align:center;">1.3</td></tr>
+            <tr><td>ETG</td><td>Grounding</td><td style="text-align:center;">300</td><td style="text-align:center;">1.1</td></tr>
+            <tr><td>RSM</td><td>Monitoring</td><td style="text-align:center;">300</td><td style="text-align:center;">4.5</td></tr>
+            <tr><td>SC</td><td>Counting</td><td style="text-align:center;">300</td><td style="text-align:center;">1.0</td></tr>
+            <tr><td rowspan="3"><b>Comprehension</b></td><td>SCA</td><td>Alert</td><td style="text-align:center;">300</td><td style="text-align:center;">3.3</td></tr>
+            <tr><td>CC</td><td>Counting</td><td style="text-align:center;">300</td><td style="text-align:center;">4.8</td></tr>
+            <tr><td>EN</td><td>Narration</td><td style="text-align:center;">300</td><td style="text-align:center;">4.4</td></tr>
+            <tr><td rowspan="2"><b>Reasoning</b></td><td>DC</td><td>Counting</td><td style="text-align:center;">300</td><td style="text-align:center;">4.1</td></tr>
+            <tr><td>SSI</td><td>Prediction</td><td style="text-align:center;">300</td><td style="text-align:center;">5.7</td></tr>
+            <tr style="background:#f0f0f0; font-weight:bold;"><td colspan="3">Total</td><td style="text-align:center;">2,700</td><td style="text-align:center;">3.4</td></tr>
           </tbody>
         </table>
       </div>
@@ -159,12 +153,71 @@
   </div>
 </section>
 
-<!-- Results -->
-<section class="section" style="background-color: #f5f5f5;">
+<!-- Sample Examples (Visualization) -->
+<section class="section" style="background-color: #f8f9fa;">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Main Results</h2>
-    <div class="content has-text-centered">
-      <p>All models achieve modest performance, confirming that omni-proactive streaming video understanding remains a challenging open problem. Gemini-3-Flash leads with 40.4% paired_accuracy in Probe mode, while MiniCPM-o 4.5 achieves 20.9% joint_F1 in Online mode.</p>
+    <h2 class="title is-3 has-text-centered">Sample Examples</h2>
+    <p class="has-text-centered" style="margin-bottom:1.5rem;">Representative samples from each sub-task showing the user instruction (<b>Q</b>) and expected proactive responses (<b>A</b>) with trigger times.</p>
+
+    <div class="columns is-multiline">
+      <!-- IEA -->
+      <div class="column is-6">
+        <div class="box">
+          <span class="tag is-info is-light">IEA – Instant Event Alert</span>
+          <span class="tag is-danger is-light">🎧 Audio Required</span>
+          <p style="margin-top:0.5rem;"><b>Q:</b> <em>Let me know if the owner asks the dog if he's talking back.</em></p>
+          <p style="margin-top:0.3rem; color:#555;"><b>A</b> [00:08]: "The owner just asked Devin, 'Are you talking back to me?'" <span class="tag is-small">speech</span></p>
+        </div>
+      </div>
+      <!-- RSM -->
+      <div class="column is-6">
+        <div class="box">
+          <span class="tag is-info is-light">RSM – Realtime State Monitor</span>
+          <span class="tag is-danger is-light">🎧 Audio Required</span>
+          <p style="margin-top:0.5rem;"><b>Q:</b> <em>Monitor the background music and let me know whenever it starts or stops.</em></p>
+          <p style="margin-top:0.3rem; color:#555;"><b>A</b> [00:14]: "The music stopped — it went from playing to silence." <span class="tag is-small">sound</span></p>
+          <p style="color:#555;"><b>A</b> [02:11]: "Music started — it went from silence to playing." <span class="tag is-small">sound</span></p>
+        </div>
+      </div>
+      <!-- CC -->
+      <div class="column is-6">
+        <div class="box">
+          <span class="tag is-info is-light">CC – Cumulative Counting</span>
+          <span class="tag is-danger is-light">🎧 Audio Required</span>
+          <p style="margin-top:0.5rem;"><b>Q:</b> <em>Count how many times the narrator says the word 'game'.</em></p>
+          <p style="margin-top:0.3rem; color:#555;"><b>A</b> [00:10]: "The narrator just mentioned a 'four-quarter game'." <span class="tag is-small">speech</span></p>
+          <p style="color:#555;"><b>A</b> [00:22]: "He says this game is important for getting the team back on track." <span class="tag is-small">speech</span></p>
+        </div>
+      </div>
+      <!-- ETG -->
+      <div class="column is-6">
+        <div class="box">
+          <span class="tag is-info is-light">ETG – Explicit Target Grounding</span>
+          <span class="tag is-danger is-light">🎧 Audio Required</span>
+          <p style="margin-top:0.5rem;"><b>Q:</b> <em>When the host says 'always' during his sign-off, tell me where his raised index finger is.</em></p>
+          <p style="margin-top:0.3rem; color:#555;"><b>A</b> [04:13]: "The host just said 'always' — his raised index finger is in the top-left." <span class="tag is-small">visual+speech</span></p>
+        </div>
+      </div>
+      <!-- SCA -->
+      <div class="column is-6">
+        <div class="box">
+          <span class="tag is-info is-light">SCA – Semantic Condition Alert</span>
+          <span class="tag is-danger is-light">🎧 Audio Required</span>
+          <p style="margin-top:0.5rem;"><b>Q:</b> <em>Alert me whenever the speaker mentions a specific number or statistic.</em></p>
+          <p style="margin-top:0.3rem; color:#555;"><b>A</b> [00:23]: "Kevin mentions over a thousand friends attended the bash." <span class="tag is-small">speech</span></p>
+          <p style="color:#555;"><b>A</b> [00:26]: "He notes that over 60 students made a spiritual commitment." <span class="tag is-small">speech</span></p>
+        </div>
+      </div>
+      <!-- SSI -->
+      <div class="column is-6">
+        <div class="box">
+          <span class="tag is-info is-light">SSI – Sequential Step Instruction</span>
+          <span class="tag is-danger is-light">🎧 Audio Required</span>
+          <p style="margin-top:0.5rem;"><b>Q:</b> <em>I'm following along with this tutorial to change my road tire. Guide me through each step.</em></p>
+          <p style="margin-top:0.3rem; color:#555;"><b>A</b> [00:18]: "Open your brake calipers, then untighten the quick-release lever." <span class="tag is-small">visual+speech</span></p>
+          <p style="color:#555;"><b>A</b> [00:29]: "Deflate the tube by pressing the valve. Use tire levers to pry the bead." <span class="tag is-small">visual+speech</span></p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -174,46 +227,44 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Analysis</h2>
 
-    <!-- Audio Dependency -->
-    <div class="columns is-centered mt-3">
+    <div class="columns is-centered" style="margin-top:1.5rem;">
       <div class="column is-5">
-        <h3 class="title is-5 has-text-centered">Audio Dependency per Task</h3>
-        <img src="./static/images/audio_dependency_per_task.png" alt="Audio dependency per sub-task" width="100%">
+        <h4 class="title is-6 has-text-centered">Audio Dependency per Task</h4>
+        <img src="./static/images/audio_dependency_per_task.png" alt="Audio dependency" width="100%" style="border-radius:4px;">
       </div>
       <div class="column is-3">
-        <h3 class="title is-5 has-text-centered">Trigger Modality</h3>
-        <img src="./static/images/trigger_modality_composition.png" alt="Trigger modality composition" width="100%">
+        <h4 class="title is-6 has-text-centered">Trigger Modality</h4>
+        <img src="./static/images/trigger_modality_composition.png" alt="Trigger modality" width="100%" style="border-radius:4px;">
       </div>
       <div class="column is-4">
-        <h3 class="title is-5 has-text-centered">Trigger Modality Radar</h3>
-        <img src="./static/images/trigger_modality_radar.png" alt="Trigger modality radar" width="100%">
+        <h4 class="title is-6 has-text-centered">Modality Radar</h4>
+        <img src="./static/images/trigger_modality_radar.png" alt="Radar" width="100%" style="border-radius:4px;">
       </div>
     </div>
 
-    <!-- Temporal -->
-    <div class="columns is-centered mt-3">
+    <div class="columns is-centered" style="margin-top:1rem;">
       <div class="column is-6">
-        <h3 class="title is-5 has-text-centered">Trigger Time Distribution</h3>
-        <img src="./static/images/trigger_time_distribution.png" alt="Trigger time distribution" width="100%">
+        <h4 class="title is-6 has-text-centered">Trigger Time Distribution</h4>
+        <img src="./static/images/trigger_time_distribution.png" alt="Trigger time" width="100%" style="border-radius:4px;">
       </div>
       <div class="column is-6">
-        <h3 class="title is-5 has-text-centered">Temporal Position Ablation</h3>
-        <img src="./static/images/temporal_position_ablation.png" alt="Temporal position ablation" width="100%">
+        <h4 class="title is-6 has-text-centered">Temporal Position Ablation</h4>
+        <img src="./static/images/temporal_position_ablation.png" alt="Temporal ablation" width="100%" style="border-radius:4px;">
       </div>
     </div>
   </div>
 </section>
 
 <!-- Key Findings -->
-<section class="section">
+<section class="section" style="background-color: #f8f9fa;">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Key Findings</h2>
-    <div class="content">
-      <ul>
-        <li><strong>Audio utilization varies widely:</strong> A+V gains range from +2.4 to +11.1 across omni models, revealing divergent audio encoding capabilities.</li>
-        <li><strong>Temporal degradation:</strong> Models retain only 37% of early-segment performance on late triggers (180s+); online streaming models nearly fail entirely.</li>
-        <li><strong>Non-speech sound is the weakest link:</strong> All models perform worst on visual+sound triggers (15.3–22.3%), highlighting a shared bottleneck.</li>
-        <li><strong>Online mode adds fundamental difficulty:</strong> The coupled challenge of <em>when-to-speak</em> and <em>what-to-say</em> causes severe degradation on generation tasks.</li>
+    <div class="content" style="max-width:800px; margin:auto; margin-top:1.5rem;">
+      <ul style="font-size:1.05rem; line-height:1.8;">
+        <li><b>Audio utilization varies widely:</b> A+V gains range from +2.4 to +11.1 across omni models, revealing divergent audio encoding capabilities.</li>
+        <li><b>Temporal degradation:</b> Models retain only 37% of early-segment performance on late triggers (180s+); online streaming models nearly fail entirely.</li>
+        <li><b>Non-speech sound is the weakest link:</b> All models perform worst on visual+sound triggers (15.3–22.3%), highlighting a shared bottleneck.</li>
+        <li><b>Online mode adds fundamental difficulty:</b> The coupled challenge of <em>when-to-speak</em> and <em>what-to-say</em> causes severe degradation on generation tasks.</li>
       </ul>
     </div>
   </div>
@@ -222,9 +273,10 @@
 <!-- BibTeX -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{omniproactbench2026,
-  title={OmniProact-Bench: A Comprehensive Benchmark for Omni Proactive Streaming Video Understanding},
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre style="border-radius:8px; padding:1.5rem;"><code>@inproceedings{omniproactbench2026,
+  title={OmniProact-Bench: A Comprehensive Benchmark for Omni Proactive
+         Streaming Video Understanding},
   author={Anonymous},
   booktitle={NeurIPS 2026 Evaluations and Datasets Track},
   year={2026}
@@ -233,10 +285,10 @@
 </section>
 
 <!-- Footer -->
-<footer class="footer">
+<footer class="footer" style="padding: 1.5rem 0;">
   <div class="container">
-    <div class="content has-text-centered">
-      <p>This website template is borrowed from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+    <div class="content has-text-centered" style="color:#888;">
+      <p>Website template adapted from <a href="https://nerfies.github.io/" style="color:#666;">Nerfies</a>.</p>
     </div>
   </div>
 </footer>

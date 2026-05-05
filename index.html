@@ -21,7 +21,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">OmniProact-Bench</h1>
-          <h2 class="subtitle is-4" style="margin-top:-0.5rem;">A Comprehensive Benchmark for Omni Proactive Streaming Video Understanding</h2>
+          <h2 class="subtitle is-4" style="margin-top:-0.5rem;">A Comprehensive Benchmark for Omni-Proactive Streaming Video Understanding</h2>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">Anonymous Authors</span>
@@ -34,7 +34,7 @@
           <div class="column has-text-centered" style="margin-top:1.2rem;">
             <div class="publication-links">
               <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-light" style="pointer-events:none; opacity:0.5;">
+                <a class="external-link button is-normal is-rounded is-dark" style="pointer-events:none; opacity:0.6;">
                   <span class="icon"><i class="ai ai-arxiv"></i></span>
                   <span>Paper (Coming Soon)</span>
                 </a>
@@ -47,13 +47,13 @@
               </span>
               <span class="link-block">
                 <a href="https://huggingface.co/datasets/omniproact-bench-neurips26/omniproact-bench" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><img src="./static/images/huggingface.svg" style="height:1em; vertical-align:middle;"></span>
+                  <span class="icon"><img src="./static/images/huggingface.svg" style="height:1em; vertical-align:middle; filter:brightness(10);"></span>
                   <span>Dataset</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/omniproact-bench-neurips26/omniproact-bench_subset" class="external-link button is-normal is-rounded is-warning">
-                  <span class="icon"><img src="./static/images/huggingface.svg" style="height:1em; vertical-align:middle;"></span>
+                <a href="https://huggingface.co/datasets/omniproact-bench-neurips26/omniproact-bench_subset" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><img src="./static/images/huggingface.svg" style="height:1em; vertical-align:middle; filter:brightness(10);"></span>
                   <span>Subset (Review)</span>
                 </a>
               </span>
@@ -313,15 +313,19 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Dataset Statistics</h2>
     <div class="columns is-centered" style="margin-top:1.5rem;">
-      <div class="column is-5">
+      <div class="column is-4">
         <h4 class="title is-6 has-text-centered">Audio Dependency per Task</h4>
         <img src="./static/images/audio_dependency_per_task.png" alt="Audio dependency" width="100%">
       </div>
-      <div class="column is-3">
+      <div class="column is-2">
         <h4 class="title is-6 has-text-centered">Trigger Modality</h4>
         <img src="./static/images/trigger_modality_composition.png" alt="Trigger modality" width="100%">
       </div>
-      <div class="column is-4">
+      <div class="column is-3">
+        <h4 class="title is-6 has-text-centered">Trigger Word Cloud</h4>
+        <img src="./static/images/trigger_event_wordcloud.png" alt="Word cloud" width="100%">
+      </div>
+      <div class="column is-3">
         <h4 class="title is-6 has-text-centered">Trigger Time Distribution</h4>
         <img src="./static/images/trigger_time_distribution.png" alt="Trigger time" width="100%">
       </div>
@@ -366,10 +370,9 @@
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
     <pre style="border-radius:8px; padding:1.2rem; background:#2d2d2d; color:#f8f8f2; font-size:0.85rem;"><code>@inproceedings{omniproactbench2026,
-  title={OmniProact-Bench: A Comprehensive Benchmark for Omni Proactive
+  title={OmniProact-Bench: A Comprehensive Benchmark for Omni-Proactive
          Streaming Video Understanding},
   author={Anonymous},
-  booktitle={NeurIPS 2026 Evaluations and Datasets Track},
   year={2026}
 }</code></pre>
   </div>

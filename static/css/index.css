@@ -1,0 +1,71 @@
+/* index.css - OmniProact-Bench Project Page */
+
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 700;
+}
+
+.publication-authors {
+  margin-bottom: 0.5rem;
+}
+
+.publication-links {
+  margin-top: 1.5rem;
+}
+
+.link-block {
+  margin: 0.25rem;
+}
+
+.hero.teaser {
+  padding-top: 0;
+}
+
+.hero.teaser .hero-body {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.subtitle {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.box {
+  padding: 2rem;
+}
+
+.box h3 {
+  margin-top: 0.75rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+section.section {
+  padding: 3rem 1.5rem;
+}
+
+table.table th, table.table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+table.table th:first-child, table.table td:first-child,
+table.table th:nth-child(2), table.table td:nth-child(2),
+table.table th:nth-child(3), table.table td:nth-child(3) {
+  text-align: left;
+}
+
+pre code {
+  font-size: 0.85rem;
+}
+
+footer {
+  padding: 2rem 0;
+}

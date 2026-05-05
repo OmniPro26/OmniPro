@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="OmniProact-Bench: A Comprehensive Benchmark for Omni Proactive Streaming Video Understanding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniProact-Bench</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">OmniProact-Bench</h1>
+          <h2 class="subtitle is-4">A Comprehensive Benchmark for Omni Proactive Streaming Video Understanding</h2>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous Authors</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">NeurIPS 2026 Evaluations &amp; Datasets Track</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="https://anonymous.4open.science/r/OmniProact-Bench-1D5E" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Dataset Link -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/omniproact-bench-neurips26/omniproact-bench" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="far fa-images"></i></span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser / Overview Figure -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/benchmark.png" alt="OmniProact-Bench Overview" width="100%">
+      <h2 class="subtitle has-text-centered">
+        OmniProact-Bench comprises 9 sub-tasks across 3 cognitive levels, covering 6 fundamental video understanding capabilities with 84% audio dependency.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Omni-proactive streaming video understanding</strong> requires a model to autonomously decide when to speak and actively produce responses based on visual or auditory signals while processing a continuous video stream, rather than relying solely on visual triggers. Despite the rapid proliferation of streaming models targeting this capability, how to systematically evaluate them remains an open question: existing proactive benchmarks depend almost exclusively on visual triggers, failing to distinguish omni-modal models from vision-only counterparts; they adopt polling or fixed-timestamp paradigms that leave genuine autonomous timing untested; and their task diversity is narrow, mostly limited to alerting.
+          </p>
+          <p>
+            To jointly address these limitations, we present <strong>OmniProact-Bench</strong>, the first comprehensive benchmark for omni-proactive streaming video understanding. OmniProact-Bench comprises <strong>2,700 human-reviewed samples</strong> spanning 9 sub-tasks and 3 cognitive levels that collectively map onto 6 fundamental video understanding capabilities, with <strong>84% of samples depending on audio information</strong>. We further propose a dual-mode evaluation protocol: a <em>GT Probe</em> mode that tests temporal boundary sensitivity via pre/post paired probing, and an <em>Online</em> mode requiring frame-by-frame autonomous decision-making with multi-trigger support and over-trigger penalties.
+          </p>
+          <p>
+            Evaluation of 11 mainstream models reveals that current omni models benefit from audio yet differ markedly in their utilization ability; performance degrades substantially as the video stream progresses, exposing a fundamental deficiency in sustained attention; and non-speech sound perception remains a shared bottleneck across all architectures.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features -->
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Key Features</h2>
+    <div class="columns is-multiline">
+      <div class="column is-4">
+        <div class="box has-text-centered">
+          <span class="icon is-large"><i class="fas fa-headphones fa-2x"></i></span>
+          <h3 class="title is-5 mt-3">Omni-Modal</h3>
+          <p>84% audio dependency with modality-isolation labels for fine-grained multi-modal analysis.</p>
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="box has-text-centered">
+          <span class="icon is-large"><i class="fas fa-clock fa-2x"></i></span>
+          <h3 class="title is-5 mt-3">Autonomous Timing</h3>
+          <p>Online mode: models decide <em>when</em> to speak, with multi-trigger support and over-trigger penalties.</p>
+        </div>
+      </div>
+      <div class="column is-4">
+        <div class="box has-text-centered">
+          <span class="icon is-large"><i class="fas fa-tasks fa-2x"></i></span>
+          <h3 class="title is-5 mt-3">Diverse Tasks</h3>
+          <p>9 sub-tasks covering 6 capabilities: Alert, Monitoring, Grounding, Counting, Narration, Prediction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Statistics -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Benchmark Statistics</h2>
+    <div class="columns is-centered">
+      <div class="column is-10">
+        <table class="table is-bordered is-striped is-fullwidth">
+          <thead>
+            <tr>
+              <th>Level</th><th>Task</th><th>Capability</th><th>Samples</th><th>Avg. Triggers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td rowspan="4"><strong>Perception</strong></td><td>IEA</td><td>Alert</td><td>300</td><td>1.3</td></tr>
+            <tr><td>ETG</td><td>Grounding</td><td>300</td><td>1.1</td></tr>
+            <tr><td>RSM</td><td>Monitoring</td><td>300</td><td>4.5</td></tr>
+            <tr><td>SC</td><td>Counting</td><td>300</td><td>1.0</td></tr>
+            <tr><td rowspan="3"><strong>Comprehension</strong></td><td>SCA</td><td>Alert</td><td>300</td><td>3.3</td></tr>
+            <tr><td>CC</td><td>Counting</td><td>300</td><td>4.8</td></tr>
+            <tr><td>EN</td><td>Narration</td><td>300</td><td>4.4</td></tr>
+            <tr><td rowspan="2"><strong>Reasoning</strong></td><td>DC</td><td>Counting</td><td>300</td><td>4.1</td></tr>
+            <tr><td>SSI</td><td>Prediction</td><td>300</td><td>5.7</td></tr>
+            <tr><td colspan="3"><strong>Total</strong></td><td><strong>2,700</strong></td><td><strong>3.4</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Main Results</h2>
+    <div class="content has-text-centered">
+      <p>All models achieve modest performance, confirming that omni-proactive streaming video understanding remains a challenging open problem. Gemini-3-Flash leads with 40.4% paired_accuracy in Probe mode, while MiniCPM-o 4.5 achieves 20.9% joint_F1 in Online mode.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Analysis Figures -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Analysis</h2>
+
+    <!-- Audio Dependency -->
+    <div class="columns is-centered mt-3">
+      <div class="column is-5">
+        <h3 class="title is-5 has-text-centered">Audio Dependency per Task</h3>
+        <img src="./static/images/audio_dependency_per_task.png" alt="Audio dependency per sub-task" width="100%">
+      </div>
+      <div class="column is-3">
+        <h3 class="title is-5 has-text-centered">Trigger Modality</h3>
+        <img src="./static/images/trigger_modality_composition.png" alt="Trigger modality composition" width="100%">
+      </div>
+      <div class="column is-4">
+        <h3 class="title is-5 has-text-centered">Trigger Modality Radar</h3>
+        <img src="./static/images/trigger_modality_radar.png" alt="Trigger modality radar" width="100%">
+      </div>
+    </div>
+
+    <!-- Temporal -->
+    <div class="columns is-centered mt-3">
+      <div class="column is-6">
+        <h3 class="title is-5 has-text-centered">Trigger Time Distribution</h3>
+        <img src="./static/images/trigger_time_distribution.png" alt="Trigger time distribution" width="100%">
+      </div>
+      <div class="column is-6">
+        <h3 class="title is-5 has-text-centered">Temporal Position Ablation</h3>
+        <img src="./static/images/temporal_position_ablation.png" alt="Temporal position ablation" width="100%">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Findings -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Key Findings</h2>
+    <div class="content">
+      <ul>
+        <li><strong>Audio utilization varies widely:</strong> A+V gains range from +2.4 to +11.1 across omni models, revealing divergent audio encoding capabilities.</li>
+        <li><strong>Temporal degradation:</strong> Models retain only 37% of early-segment performance on late triggers (180s+); online streaming models nearly fail entirely.</li>
+        <li><strong>Non-speech sound is the weakest link:</strong> All models perform worst on visual+sound triggers (15.3–22.3%), highlighting a shared bottleneck.</li>
+        <li><strong>Online mode adds fundamental difficulty:</strong> The coupled challenge of <em>when-to-speak</em> and <em>what-to-say</em> causes severe degradation on generation tasks.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{omniproactbench2026,
+  title={OmniProact-Bench: A Comprehensive Benchmark for Omni Proactive Streaming Video Understanding},
+  author={Anonymous},
+  booktitle={NeurIPS 2026 Evaluations and Datasets Track},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>This website template is borrowed from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

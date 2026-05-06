@@ -70,7 +70,7 @@
     <div class="hero-body" style="padding-top:0;">
       <img src="./static/images/benchmark.png" alt="OmniPro Overview" width="100%" style="border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.1);">
       <p class="has-text-centered" style="margin-top:0.8rem; font-size:0.95rem; color:#666;">
-        <b>Figure 1.</b> OmniPro: 9 sub-tasks × 3 cognitive levels × 6 capabilities, with 84% audio dependency.
+        <b>Figure 1.</b> Overview of OmniPro. The benchmark comprises 9 sub-tasks organized into three cognitive levels, collectively covering 6 basic video understanding capabilities.
       </p>
     </div>
   </div>
@@ -375,10 +375,10 @@
     <h2 class="title is-3 has-text-centered">Key Findings</h2>
     <div class="content" style="max-width:800px; margin:1.5rem auto 0;">
       <ul style="font-size:1.05rem; line-height:1.9;">
-        <li><b>Audio utilization varies widely:</b> A+V gains range from +2.4 to +11.1 across omni models.</li>
-        <li><b>Temporal degradation:</b> Models retain only 37% of early-segment performance on late triggers (180s+).</li>
-        <li><b>Non-speech sound is the weakest link:</b> All models perform worst on visual+sound triggers (15.3–22.3%).</li>
-        <li><b>Online mode adds fundamental difficulty:</b> The coupled challenge of <em>when-to-speak</em> and <em>what-to-say</em> severely degrades generation tasks.</li>
+        <li><b>Proprietary vs. open-source gap:</b> Gemini-3-Flash achieves 40.4% accuracy, nearly double the best open-source model (22.6%), with the largest gap on reasoning-level tasks.</li>
+        <li><b>Divergent modality utilization:</b> Audio and video provide complementary cues (A+V gains range from +2.4 to +11.1), yet models exhibit divergent patterns—some rely on audio, others on vision.</li>
+        <li><b>Long-horizon degradation:</b> All models struggle to perceive events occurring late in videos, retaining only 37% of early-segment performance at 180s+.</li>
+        <li><b>Non-speech sound is the weakest link:</b> All models perform worst on visual+sound triggers (15.3–22.3%), revealing a shared bottleneck.</li>
       </ul>
     </div>
   </div>

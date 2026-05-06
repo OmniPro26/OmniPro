@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="OmniProact-Bench: A Comprehensive Benchmark for Omni Proactive Streaming Video Understanding">
+  <meta name="description" content="OmniPro: A Comprehensive Benchmark for Omni-Proactive Streaming Video Understanding">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OmniProact-Bench</title>
+  <title>OmniPro</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -20,7 +20,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">OmniProact-Bench</h1>
+          <h1 class="title is-1 publication-title">OmniPro</h1>
           <h2 class="subtitle is-4" style="margin-top:-0.5rem;">A Comprehensive Benchmark for Omni-Proactive Streaming Video Understanding</h2>
 
           <div class="is-size-5 publication-authors">
@@ -39,19 +39,19 @@
               </span>
               -->
               <span class="link-block">
-                <a href="https://anonymous.4open.science/r/OmniProact-Bench-1D5E" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://anonymous.4open.science/r/OmniPro-5031" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fa-brands fa-github"></i></span>
                   <span>Code</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/omniproact-bench/omniproact-bench" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://huggingface.co/datasets/omniproact-bench/OmniPro" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">🤗</span>
                   <span>Dataset</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://huggingface.co/datasets/omniproact-bench/omniproact-bench_subset" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://huggingface.co/datasets/omniproact-bench/OmniPro_subset" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">🤗</span>
                   <span>Dataset Subset</span>
                 </a>
@@ -68,9 +68,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body" style="padding-top:0;">
-      <img src="./static/images/benchmark.png" alt="OmniProact-Bench Overview" width="100%" style="border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.1);">
+      <img src="./static/images/benchmark.png" alt="OmniPro Overview" width="100%" style="border-radius:8px; box-shadow:0 4px 16px rgba(0,0,0,0.1);">
       <p class="has-text-centered" style="margin-top:0.8rem; font-size:0.95rem; color:#666;">
-        <b>Figure 1.</b> OmniProact-Bench: 9 sub-tasks × 3 cognitive levels × 6 capabilities, with 84% audio dependency.
+        <b>Figure 1.</b> OmniPro: 9 sub-tasks × 3 cognitive levels × 6 capabilities, with 84% audio dependency.
       </p>
     </div>
   </div>
@@ -83,9 +83,10 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3 has-text-centered">Abstract</h2>
         <div class="content has-text-justified">
-          <p><b>Omni-proactive streaming video understanding</b> requires a model to autonomously decide when to speak and actively produce responses based on visual or auditory signals while processing a continuous video stream, rather than relying solely on visual triggers. Despite the rapid proliferation of streaming models, how to systematically evaluate them remains an open question: existing proactive benchmarks depend almost exclusively on visual triggers; they adopt polling or fixed-timestamp paradigms that leave genuine autonomous timing untested; and their task diversity is narrow.</p>
-          <p>We present <b>OmniProact-Bench</b>, the first comprehensive benchmark for this task. It comprises <b>2,700 human-reviewed samples</b> spanning 9 sub-tasks and 3 cognitive levels (6 capabilities), with <b>84% audio dependency</b>. We propose a dual-mode protocol: <em>GT Probe</em> (pre/post paired probing) and <em>Online</em> (frame-by-frame autonomous decision-making with multi-trigger support and over-trigger penalties).</p>
-          <p>Evaluation of 11 mainstream models reveals that omni models differ markedly in audio utilization; performance degrades substantially over time; and non-speech sound perception remains a shared bottleneck.</p>
+          <p><b>Omni-proactive streaming video understanding</b>, i.e., autonomously deciding when to speak and what to say from continuous audio-visual streams, is an emerging capability of omni-modal large language models. Existing benchmarks fall short in three key aspects: they rely primarily on visual signals, adopt polling or fixed-timestamp protocols instead of true proactive evaluation, and cover only a limited range of tasks, preventing reliable assessment and differentiation of omni-proactive streaming models.</p>
+          <p>We present <b>OmniPro</b>, the first benchmark to jointly evaluate omni-modal perception, proactive responding, and diverse video understanding tasks. It comprises <b>2,700 human-verified samples</b> spanning 9 sub-tasks and 3 cognitive levels, covering 6 basic video understanding capabilities. Notably, <b>84% of samples require audio signals</b> (speech or non-speech), and each sample is annotated with modality-isolation labels to enable fine-grained multimodal analysis.</p>
+          <p>We further introduce a dual-mode evaluation protocol: <em>Probe</em> mode assesses content understanding by querying the model before and after each ground-truth trigger, while <em>Online</em> mode evaluates full proactive ability by requiring models to autonomously decide when to respond in streaming input.</p>
+          <p>Evaluating 11 representative models reveals three key findings: (1) audio provides consistent gains but with highly variable utilization across models, (2) performance degrades significantly over time, indicating limited long-horizon robustness, and (3) non-speech audio perception remains the weakest dimension.</p>
         </div>
       </div>
     </div>
@@ -107,7 +108,7 @@
       <div class="column is-4">
         <div class="box has-text-centered" style="height:100%;">
           <span class="icon is-large" style="color:#E86330;"><i class="fas fa-clock fa-2x"></i></span>
-          <h3 class="title is-5" style="margin-top:0.75rem;">Autonomous Timing</h3>
+          <h3 class="title is-5" style="margin-top:0.75rem;">Proactive Responding</h3>
           <p>Models decide <em>when</em> to speak with multi-trigger support and over-trigger penalties.</p>
         </div>
       </div>
@@ -139,11 +140,11 @@
         <div class="columns is-vcentered">
           <div class="column is-5">
             <video controls width="100%" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-              <source src="https://huggingface.co/datasets/omniproact-bench/omniproact-bench/resolve/main/raw_videos/VkVB9hsAf3g.mp4" type="video/mp4">
+              <source src="https://huggingface.co/datasets/omniproact-bench/OmniPro/resolve/main/raw_videos/VkVB9hsAf3g.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-7">
-            <span class="tag is-info">IEA – Instant Event Alert</span> <span class="tag is-danger">🎧 Audio Required</span>
+            <span class="tag is-info">Event-Alert</span> <span class="tag is-danger">🎧 Audio Required</span>
             <p style="margin-top:0.8rem;"><b>Q:</b> <em>Let me know if you hear the sound of pots and pans clinking in the kitchen.</em></p>
             <div style="margin-top:0.5rem; padding:0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #2B7BE8;">
               <p><span class="tag is-dark" style="margin-right:4px;">00:13</span> <span class="tag is-warning">sound</span><br>"She's rummaging through the cabinets now — I hear the pots clinking."</p>
@@ -156,11 +157,11 @@
         <div class="columns is-vcentered">
           <div class="column is-5">
             <video controls width="100%" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-              <source src="https://huggingface.co/datasets/omniproact-bench/omniproact-bench/resolve/main/raw_videos/ntbmuiuta_8.mp4" type="video/mp4">
+              <source src="https://huggingface.co/datasets/omniproact-bench/OmniPro/resolve/main/raw_videos/ntbmuiuta_8.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-7">
-            <span class="tag is-info">RSM – Realtime State Monitor</span> <span class="tag is-danger">🎧 Audio Required</span>
+            <span class="tag is-info">State-Monitor</span> <span class="tag is-danger">🎧 Audio Required</span>
             <p style="margin-top:0.8rem;"><b>Q:</b> <em>Monitor the audio and let me know whenever the narrator starts or stops speaking.</em></p>
             <div style="margin-top:0.5rem; padding:0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #2B7BE8;">
               <p><span class="tag is-dark" style="margin-right:4px;">00:10</span> <span class="tag is-link is-light">speech</span><br>"The narrator started speaking — changed from music only to speech."</p>
@@ -175,11 +176,11 @@
         <div class="columns is-vcentered">
           <div class="column is-5">
             <video controls width="100%" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-              <source src="https://huggingface.co/datasets/omniproact-bench/omniproact-bench/resolve/main/raw_videos/7GkZ7PLMaZk.mp4" type="video/mp4">
+              <source src="https://huggingface.co/datasets/omniproact-bench/OmniPro/resolve/main/raw_videos/7GkZ7PLMaZk.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-7">
-            <span class="tag is-info">SC – Snapshot Counting</span> <span class="tag is-danger">🎧 Audio Required</span>
+            <span class="tag is-info">Snap.-Count</span> <span class="tag is-danger">🎧 Audio Required</span>
             <p style="margin-top:0.8rem;"><b>Q:</b> <em>When the speaker says he will pronounce the word slower, count how many letters are in the word on the screen.</em></p>
             <div style="margin-top:0.5rem; padding:0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #2B7BE8;">
               <p><span class="tag is-dark" style="margin-right:4px;">00:34</span> <span class="tag is-primary is-light">visual+speech</span><br>"He's speaking slower now — I count 8 letters in the word."</p>
@@ -192,11 +193,11 @@
         <div class="columns is-vcentered">
           <div class="column is-5">
             <video controls width="100%" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-              <source src="https://huggingface.co/datasets/omniproact-bench/omniproact-bench/resolve/main/raw_videos/L1q4J7oNswA.mp4" type="video/mp4">
+              <source src="https://huggingface.co/datasets/omniproact-bench/OmniPro/resolve/main/raw_videos/L1q4J7oNswA.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-7">
-            <span class="tag is-info">ETG – Explicit Target Grounding</span> <span class="tag is-danger">🎧 Audio Required</span>
+            <span class="tag is-info">Target-Ground</span> <span class="tag is-danger">🎧 Audio Required</span>
             <p style="margin-top:0.8rem;"><b>Q:</b> <em>The first time you hear the sound of a bell ringing, tell me where the bell is in the frame.</em></p>
             <div style="margin-top:0.5rem; padding:0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #2B7BE8;">
               <p><span class="tag is-dark" style="margin-right:4px;">00:10</span> <span class="tag is-warning">visual+sound</span><br>"The bell just rang—it is located in the top-center of the frame."</p>
@@ -209,11 +210,11 @@
         <div class="columns is-vcentered">
           <div class="column is-5">
             <video controls width="100%" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-              <source src="https://huggingface.co/datasets/omniproact-bench/omniproact-bench/resolve/main/raw_videos/U_yDpCSi0bQ.mp4" type="video/mp4">
+              <source src="https://huggingface.co/datasets/omniproact-bench/OmniPro/resolve/main/raw_videos/U_yDpCSi0bQ.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-7">
-            <span class="tag is-info">SCA – Semantic Condition Alert</span> <span class="tag is-danger">🎧 Audio Required</span>
+            <span class="tag is-info">Cond.-Alert</span> <span class="tag is-danger">🎧 Audio Required</span>
             <p style="margin-top:0.8rem;"><b>Q:</b> <em>Alert me whenever one of the children makes a dismissive or negative comment about an idea or suggestion shared by someone else.</em></p>
             <div style="margin-top:0.5rem; padding:0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #2B7BE8;">
               <p><span class="tag is-dark" style="margin-right:4px;">00:08</span> <span class="tag is-link is-light">speech</span><br>"A boy just dismissed a friend's suggestion about an NBA scout by calling it 'dumb'."</p>
@@ -228,11 +229,11 @@
         <div class="columns is-vcentered">
           <div class="column is-5">
             <video controls width="100%" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-              <source src="https://huggingface.co/datasets/omniproact-bench/omniproact-bench/resolve/main/raw_videos/osvkHQdxULg.mp4" type="video/mp4">
+              <source src="https://huggingface.co/datasets/omniproact-bench/OmniPro/resolve/main/raw_videos/osvkHQdxULg.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-7">
-            <span class="tag is-info">CC – Cumulative Counting</span> <span class="tag is-danger">🎧 Audio Required</span>
+            <span class="tag is-info">Cum.-Count</span> <span class="tag is-danger">🎧 Audio Required</span>
             <p style="margin-top:0.8rem;"><b>Q:</b> <em>Count how many times the word 'Devoxx' is spoken throughout the video.</em></p>
             <div style="margin-top:0.5rem; padding:0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #2B7BE8;">
               <p><span class="tag is-dark" style="margin-right:4px;">00:21</span> <span class="tag is-link is-light">speech</span><br>"Yakov Fain just mentioned Devoxx for the first time while describing the conference tracks."</p>
@@ -248,11 +249,11 @@
         <div class="columns is-vcentered">
           <div class="column is-5">
             <video controls width="100%" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-              <source src="https://huggingface.co/datasets/omniproact-bench/omniproact-bench/resolve/main/raw_videos/DxxMPyeBLvc.mp4" type="video/mp4">
+              <source src="https://huggingface.co/datasets/omniproact-bench/OmniPro/resolve/main/raw_videos/DxxMPyeBLvc.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-7">
-            <span class="tag is-info">EN – Event Narration</span> <span class="tag is-warning">🔊 Audio Helpful</span>
+            <span class="tag is-info">Event-Narr.</span> <span class="tag is-warning">🔊 Audio Helpful</span>
             <p style="margin-top:0.8rem;"><b>Q:</b> <em>Narrate the progression of Kenneth's prank, from his transformation to his performance at the outdoor gym.</em></p>
             <div style="margin-top:0.5rem; padding:0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #2B7BE8;">
               <p><span class="tag is-dark" style="margin-right:4px;">00:45</span> <span class="tag is-primary is-light">visual+speech</span><br>"Kenneth, an athlete, is undergoing a transformation into an elderly man. Makeup artists are applying latex prosthetics and airbrushing wrinkles while he describes the tight sensation of the bald cap."</p>
@@ -269,11 +270,11 @@
         <div class="columns is-vcentered">
           <div class="column is-5">
             <video controls width="100%" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-              <source src="https://huggingface.co/datasets/omniproact-bench/omniproact-bench/resolve/main/raw_videos/XhgUbBVXLEg.mp4" type="video/mp4">
+              <source src="https://huggingface.co/datasets/omniproact-bench/OmniPro/resolve/main/raw_videos/XhgUbBVXLEg.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-7">
-            <span class="tag is-info">DC – Dedup Counting</span> <span class="tag is-warning">🔊 Audio Helpful</span>
+            <span class="tag is-info">Dedup.-Count</span> <span class="tag is-warning">🔊 Audio Helpful</span>
             <p style="margin-top:0.8rem;"><b>Q:</b> <em>Count how many different people are interviewed and speak on camera in this video.</em></p>
             <div style="margin-top:0.5rem; padding:0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #2B7BE8;">
               <p><span class="tag is-dark" style="margin-right:4px;">00:18</span> <span class="tag is-primary is-light">visual+speech</span><br>"First interviewee — Marwan Farah, a resident engineer, begins speaking about the project's goals."</p>
@@ -288,11 +289,11 @@
         <div class="columns is-vcentered">
           <div class="column is-5">
             <video controls width="100%" style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-              <source src="https://huggingface.co/datasets/omniproact-bench/omniproact-bench/resolve/main/raw_videos/nh1GBPeyyMo.mp4" type="video/mp4">
+              <source src="https://huggingface.co/datasets/omniproact-bench/OmniPro/resolve/main/raw_videos/nh1GBPeyyMo.mp4" type="video/mp4">
             </video>
           </div>
           <div class="column is-7">
-            <span class="tag is-info">SSI – Sequential Step Instruction</span> <span class="tag is-warning">🔊 Audio Helpful</span>
+            <span class="tag is-info">Step-Inst.</span> <span class="tag is-warning">🔊 Audio Helpful</span>
             <p style="margin-top:0.8rem;"><b>Q:</b> <em>I'm following along to wrap a gift like this. Please guide me through each step as it happens.</em></p>
             <div style="margin-top:0.5rem; padding:0.8rem; background:#f9f9f9; border-radius:6px; border-left:3px solid #2B7BE8;">
               <p><span class="tag is-dark" style="margin-right:4px;">00:08</span> <span class="tag is-success is-light">visual</span><br>"Place the box on your cut paper. Wrap the paper tightly around the box and secure the seam with a piece of clear tape."</p>
@@ -387,8 +388,8 @@
 <section class="section" style="background-color:#f8f9fa;" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre style="border-radius:8px; padding:1.2rem; background:#2d2d2d; color:#f8f8f2; font-size:0.85rem;"><code>@inproceedings{omniproactbench2026,
-  title={OmniProact-Bench: A Comprehensive Benchmark for Omni-Proactive Streaming Video Understanding},
+    <pre style="border-radius:8px; padding:1.2rem; background:#2d2d2d; color:#f8f8f2; font-size:0.85rem;"><code>@inproceedings{omnipro2026,
+  title={OmniPro: A Comprehensive Benchmark for Omni-Proactive Streaming Video Understanding},
   author={Anonymous},
   year={2026}
 }</code></pre>
